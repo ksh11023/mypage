@@ -1,0 +1,273 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+
+}
+.wapper {
+    width: 100%;
+    min-height: 300px;
+    margin: 0 auto;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.wave{
+    position:fixed;
+    height: 100%;
+    left:0;
+    bottom: 0;
+    z-index: -1;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 7rem;
+    padding: 0 2rem;
+}
+.img img{
+    /*justify-content: flex-end;
+    align-items: center; */
+    /* background: url("../img/logo1.png") repeat scroll center center/cover; */
+    /* height: 50vh; */
+    height: 40vh;
+    width: 30vw;
+    margin: 150px 5px 0 50px;
+    display: flex;   
+}
+.img h4{
+    position:sticky;
+    display: flex;
+    margin: 0 0 0 220px;
+    font-size: 20px;
+    color: #000;
+}
+/* .img a{
+    color: #333;
+} */
+
+/* .img img{
+    display: flex;
+    width:50vw;
+} */
+
+
+
+.aboutbtn {
+    display: block;
+    outline: none;
+    border: none;
+    height: 40px;
+    /* line-height: 50px; */
+    width: 150px;
+    position: relative;
+    background: linear-gradient(120deg, #d9d9d9 0%, #74e0ef 100%);
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    border-radius: 4px;
+    margin: 0 0 0 200px;
+    transition: background-image 150ms ease;
+}
+
+.signup-container{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    /* background-color: #7a63ef; */
+    
+
+}
+form{
+    width: 430px;
+    box-shadow: 3px 3px 3px 3px #7a63ef;
+    padding: 50px 50px;
+}
+/* .female{
+    width:100px;
+} */
+
+form h2{
+    font-size: 2.9rem;
+    text-transform: uppercase;
+    margin: 15px 0;
+    color: #7a63ef;
+}
+.input-div{
+    position: relative;
+    display: grid;
+    grid-template-columns: 7% 73%;
+    margin: 25px 0;
+    padding: 5px 0;
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.input-div:after, .input-div:before{
+    content:'';
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #7a63ef;
+    transition: .3s;
+}
+
+.input-div:after{
+    right: 50%;
+}
+
+.input-div::before{
+    left: 50%;
+}
+
+.input-div.focus .i i{ /*마우스 갖다대면 아이콘 색 바뀜*/
+    color: #74e0ef;
+}
+
+.input-div.focus div h5{
+    top: -5px;
+    font-size: 15px;
+}
+
+.input-div.focus:after, .input-div.focus:before{
+    width: 50%;
+}
+
+.input-div.one{
+    margin-top: 0;
+}
+.input-div.two{
+    margin-bottom: 4px;
+}
+
+.i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.i i{
+    color: #d9d9d9;
+    transition: .3s;
+} 
+
+.input-div > div{
+    position: relative;
+    height: 45px;
+}
+
+.input-div > div h5{
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999; /* 아이콘 옆 글자 색*/
+    font-size: 18px;
+    transition: .3s;
+}
+
+.input-div h5.warning{
+    color: red !important;
+    animation:warning .3s ease;
+    animation-iteration-count: 3;
+}
+
+.input{ /* textbox 디자인*/
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: none;
+    outline: none;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* 하이퍼링크 비밀번호를 잊어버렸나요?
+a{
+    display: block;
+    text-align: right;
+    text-decoration: none;
+    color: #999;
+    font-size: 0.9rem;
+    transition: .3s;
+}
+
+a:hover{
+    color: #38d39f;
+}
+*/
+
+.button{
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+/* 버튼 타입으로 했을 때 */
+button{ 
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.btn{
+    width: 40%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, #736aef, #9d8cf3,  #c4baf8);
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    background-size: 200%;
+    transition: .5s;
+    text-align: center;
+}
+
+.btn:hover{
+    background-position: right; 
+}
+
+@media screen and (max-width: 1050px){/*반응형*/
+    .container{
+        grid-gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    form{
+        windows: 290px;
+    }
+    form h2{
+        font-size: 2.4rem;
+        margin: 8px 0;
+    }
+
+    .img img{
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    .img{
+        display: none;
+    }
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .wave{
+        display: none;
+    }
+    .signup-container{
+        justify-content: center;
+    }
+}
